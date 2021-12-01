@@ -1,0 +1,48 @@
+﻿<Window x:Class="Histalyzer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Histalyzer" Height="500" Width="800" Icon="/Histalyzer;component/Resources/Icon.ico">
+    <Grid>
+		<Menu Height="23" Name="mainMenu" VerticalAlignment="Top" >
+			<MenuItem Header="File">
+				<MenuItem Header="Open" Name="openMenuItem" Click="openMenuItem_Click" />
+			</MenuItem>
+			<MenuItem Header="Help">
+				<MenuItem Header="About" Name="aboutMenuItem" Click="aboutMenuItem_Click" />
+			</MenuItem>
+		</Menu>
+		<Grid Margin="0,23,0,23">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="5" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="5" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid Grid.Row="0">
+					<TextBox Height="23" Name="folderText" VerticalAlignment="Top" Margin="0,0,154,0" TextChanged="folderText_TextChanged" />
+					<Button Content="..." Height="23" HorizontalAlignment="Right" Name="folderButton" VerticalAlignment="Top" Width="24" Click="folderButton_Click" Margin="0,0,125,0" />
+                    <ComboBox x:Name="columnCombo" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" SelectionChanged="columnCombo_SelectionChanged"/>
+                    <ListBox Name="fileListBox" Margin="0,29,0,0" SelectionChanged="fileListBox_SelectionChanged" />
+                </Grid>
+				<GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" />
+				<TextBlock Grid.Row="2" Name="outText" />
+			</Grid>
+			<GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
+            <Grid Grid.Column="2" SizeChanged="histImage_SizeChanged">
+                <Image Name="histImage" Margin="0,0,0,58" SizeChanged="histImage_SizeChanged" MouseMove="Grid_MouseMove" MouseLeave="Grid_MouseLeave" />
+                <Label Content="Bins" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,32"/>
+                <Slider Name="binsSlider" Margin="59,0,0,29" VerticalAlignment="Bottom" ValueChanged="binsSlider_ValueChanged" Maximum="100" LargeChange="10" SmallChange="1" TickFrequency="10" TickPlacement="BottomRight" Minimum="1"/>
+                <Label Content="Partition" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,3"/>
+                <Slider Name="partitionSlider" VerticalAlignment="Bottom" ValueChanged="partitionSlider_ValueChanged" Maximum="1" LargeChange="0.1" SmallChange="0.01" TickFrequency="0.1" TickPlacement="BottomRight" Margin="59,0,0,0" Minimum="0.01"/>
+            </Grid>
+		</Grid>
+		<StatusBar Height="23" Name="statusBar" VerticalAlignment="Bottom">
+			<Label Content="" Name="statusText" Padding="0" />
+		</StatusBar>
+	</Grid>
+</Window>

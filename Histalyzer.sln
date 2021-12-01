@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histalyzer", "Histalyzer\Histalyzer.csproj", "{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "HistalyzerSetup", "HistalyzerSetup\HistalyzerSetup.vdproj", "{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Debug|x64.ActiveCfg = Debug|x64
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Debug|x64.Build.0 = Debug|x64
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Debug|x86.ActiveCfg = Debug|x86
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Debug|x86.Build.0 = Debug|x86
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Release|x64.ActiveCfg = Release|x64
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Release|x64.Build.0 = Release|x64
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Release|x86.ActiveCfg = Release|x86
+		{00CF4FA9-8174-4591-98E9-CC50CC8B5B1C}.Release|x86.Build.0 = Release|x86
+		{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}.Debug|x64.ActiveCfg = Debug
+		{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}.Debug|x64.Build.0 = Debug
+		{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}.Debug|x86.ActiveCfg = Debug
+		{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}.Release|x64.ActiveCfg = Release
+		{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}.Release|x64.Build.0 = Release
+		{61DB5AD2-5A86-4BDE-A686-153373BEC5C8}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {155A19CF-65C5-4335-A7D3-D5D0D5F72CBB}
+	EndGlobalSection
+EndGlobal

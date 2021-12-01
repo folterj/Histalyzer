@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+.vs/
+Histalyzer/obj/
+*.msi
+*.png
