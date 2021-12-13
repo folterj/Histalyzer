@@ -133,7 +133,10 @@ namespace Histalyzer
 				if (!first || !hasHeader)
 				{
 					values = Util.parseLine(line);
-					stats.data.Add(values[selectedColumn]);
+					if (selectedColumn < values.Count)
+					{
+						stats.data.Add(values[selectedColumn]);
+					}
 				}
 				first = false;
 			}
